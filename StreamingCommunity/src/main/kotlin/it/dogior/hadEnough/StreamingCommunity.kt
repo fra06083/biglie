@@ -542,16 +542,20 @@ class StreamingCommunity(
 
         title?.seasons?.forEach { season ->
             val responseEpisodes = emptyList<it.dogior.hadEnough.Episode>().toMutableList()
-            if (season.id == props.loadedSeason!!.id) {
-                responseEpisodes.addAll(props.loadedSeason.episodes!!)
+            if (season.id == props.loadedSeason?.id) {
+                responseEpisodes.addAll(props.loadedSeason.episodes.orEmpty())
             } else {
                 if (inertiaVersion == "") {
                     setupHeaders()
                 }
                 val url = "$mainUrl/titles/${title.id}-${title.slug}/season-${season.number}"
-                val obj =
-                    parseJson<InertiaResponse>(app.get(url, headers = headers).body.string())
-                responseEpisodes.addAll(obj.props.loadedSeason?.episodes!!)
+                val seasonPayload = app.get(url, headers = headers).body.string()
+                val seasonJson =
+                    if (isHtmlPayload(seasonPayload)) extractInertiaPageJson(seasonPayload)
+                        ?: seasonPayload
+                    else seasonPayload
+                val obj = parseJson<InertiaResponse>(seasonJson)
+                responseEpisodes.addAll(obj.props.loadedSeason?.episodes.orEmpty())
             }
             responseEpisodes.forEach { ep ->
 
