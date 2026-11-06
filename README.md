@@ -23,7 +23,7 @@ canale Telegram ufficiale [@Streaming_community_sito](https://t.me/Streaming_com
 4. Nel campo **URL** incolla:
 
    ```text
-   https://raw.githubusercontent.com/fra06083/biglie/builds/plugins.json
+   https://raw.githubusercontent.com/fra06083/biglie/builds/repo.json
    ```
 
 5. Salva, apri il repository e installa **StreamingCommunity**.
@@ -36,7 +36,7 @@ Dal telefono puoi aprire direttamente questo link: CloudStream si apre e carica 
 repository senza dover copiare l'URL.
 
 ```text
-cloudstreamrepo://raw.githubusercontent.com/fra06083/biglie/builds/plugins.json
+cloudstreamrepo://raw.githubusercontent.com/fra06083/biglie/builds/repo.json
 ```
 
 Se il link non è cliccabile, incollalo nella barra degli indirizzi del browser oppure
@@ -48,7 +48,7 @@ CloudStream, se nel campo URL scrivi una sola parola, la risolve tramite
 `cutt.ly` (oppure `py.md` se scrivi `!parola`). Per esempio:
 
 - crea un link gratuito su [cutt.ly](https://cutt.ly) con alias `biglie` che punti a
-  `https://raw.githubusercontent.com/fra06083/biglie/builds/plugins.json`;
+  `https://raw.githubusercontent.com/fra06083/biglie/builds/repo.json`;
 - poi in CloudStream scrivi semplicemente `biglie` nel campo URL.
 
 In alternativa registrati su [py.md](https://py.md), crea il link `py.md/biglie` e in
@@ -60,7 +60,7 @@ Senza alias, usa l'URL completo indicato sopra (funziona subito).
 
 CloudStream non ha un registro centrale: ogni utente aggiunge i repository che vuole.
 Per rendere il progetto visibile alla community puoi aggiungere una riga con nome e URL
-del `plugins.json` alla pagina wiki [List of extensions](https://cloudstream.miraheze.org/wiki/List_of_extensions)
+del `repo.json` alla pagina wiki [List of extensions](https://cloudstream.miraheze.org/wiki/List_of_extensions)
 (serve un account Miraheze) oppure alla lista [cs3-repos](https://rentry.org/cs3-repos).
 L'installazione nell'app resta quella descritta sopra.
 
@@ -69,8 +69,8 @@ L'installazione nell'app resta quella descritta sopra.
 - `scripts/update_domain.py` legge l'ultimo messaggio con `Nuovo:` dal canale Telegram,
   verifica che il dominio risponda e aggiorna provider, icona e versione.
 - `.github/workflows/update-domain.yml` lo esegue ogni 6 ore.
-- La modifica fa partire `.github/workflows/build.yml`, che pubblica il nuovo `.cs3`
-  e il nuovo `plugins.json` nella branch `builds`.
+- La modifica fa partire `.github/workflows/build.yml`, che pubblica il nuovo `.cs3`,
+  il nuovo `plugins.json` e il descrittore `repo.json` nella branch `builds`.
 
 Per aggiornare manualmente:
 

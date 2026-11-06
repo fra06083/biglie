@@ -53,7 +53,17 @@ jobs:
           ./gradlew --no-daemon make makePluginsJson
           find . -path "*/build/*.cs3" -type f -exec cp -v {} "$GITHUB_WORKSPACE/builds/" \;
           cp build/plugins.json "$GITHUB_WORKSPACE/builds/plugins.json"
-          cp build/plugins.json "$GITHUB_WORKSPACE/builds/repo.json"
+          cat > "$GITHUB_WORKSPACE/builds/repo.json" <<'EOF'
+          {
+            "name": "biglie",
+            "iconUrl": "https://raw.githubusercontent.com/fra06083/biglie/main/repo_icon.png",
+            "description": "StreamingCommunity per CloudStream con dominio aggiornato da Telegram",
+            "manifestVersion": 1,
+            "pluginLists": [
+              "https://raw.githubusercontent.com/fra06083/biglie/builds/plugins.json"
+            ]
+          }
+          EOF
 
       - name: Publish builds
         run: |
