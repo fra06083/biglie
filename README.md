@@ -1,4 +1,4 @@
-# StreamSC-CloudStream
+# biglie — StreamingCommunity per CloudStream
 
 Fork di [doGiorsHadEnough](https://github.com/doGior/doGiorsHadEnough) dedicato a
 **StreamingCommunity** per CloudStream, con dominio aggiornato automaticamente dal
@@ -43,6 +43,14 @@ In alternativa registrati su [py.md](https://py.md), crea il link `py.md/biglie`
 CloudStream scrivi `!biglie`.
 
 Senza alias, usa l'URL completo indicato sopra (funziona subito).
+
+## Registrare il repository nella lista pubblica
+
+CloudStream non ha un registro centrale: ogni utente aggiunge i repository che vuole.
+Per rendere il progetto visibile alla community puoi aggiungere una riga con nome e URL
+del `plugins.json` alla pagina wiki [List of extensions](https://cloudstream.miraheze.org/wiki/List_of_extensions)
+(serve un account Miraheze) oppure alla lista [cs3-repos](https://rentry.org/cs3-repos).
+L'installazione nell'app resta quella descritta sopra.
 
 ## Aggiornamento automatico del dominio
 
