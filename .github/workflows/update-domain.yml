@@ -1,0 +1,37 @@
+name: Update domain from Telegram
+
+on:
+  schedule:
+    # Ogni 6 ore (UTC)
+    - cron: "17 3,9,15,21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Read the latest domain from Telegram
+        run: python3 scripts/update_domain.py
+
+      - name: Commit and push
+        run: |
+          if git diff --quiet; then
+            echo "Nessuna modifica."
+            exit 0
+          fi
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add -A
+          git commit -m "chore: auto-update StreamingCommunity domain from Telegram"
+          git push
