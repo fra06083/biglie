@@ -30,6 +30,10 @@ canale Telegram ufficiale [@Streaming_community_sito](https://t.me/Streaming_com
 
 L'URL del repository è stabile: la branch `builds` viene aggiornata a ogni build.
 
+> **Importante:** l'URL da inserire in CloudStream è quello di `repo.json`
+> (il descrittore del repository), **non** `plugins.json` (la lista dei plugin).
+> Se CloudStream mostra un errore di parsing, controlla di aver usato l'URL giusto.
+
 ### Link diretto per Android
 
 Dal telefono puoi aprire direttamente questo link: CloudStream si apre e carica il
