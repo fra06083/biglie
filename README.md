@@ -23,7 +23,7 @@ canale Telegram ufficiale [@Streaming_community_sito](https://t.me/Streaming_com
 4. Nel campo **URL** incolla:
 
    ```text
-   https://raw.githubusercontent.com/fra06083/StreamSC-CloudStream/builds/plugins.json
+   https://raw.githubusercontent.com/fra06083/biglie/builds/plugins.json
    ```
 
 5. Salva, apri il repository e installa **StreamingCommunity**.
@@ -36,7 +36,7 @@ CloudStream, se nel campo URL scrivi una sola parola, la risolve tramite
 `cutt.ly` (oppure `py.md` se scrivi `!parola`). Per esempio:
 
 - crea un link gratuito su [cutt.ly](https://cutt.ly) con alias `biglie` che punti a
-  `https://raw.githubusercontent.com/fra06083/StreamSC-CloudStream/builds/plugins.json`;
+  `https://raw.githubusercontent.com/fra06083/biglie/builds/plugins.json`;
 - poi in CloudStream scrivi semplicemente `biglie` nel campo URL.
 
 In alternativa registrati su [py.md](https://py.md), crea il link `py.md/biglie` e in
