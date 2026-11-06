@@ -30,6 +30,18 @@ canale Telegram ufficiale [@Streaming_community_sito](https://t.me/Streaming_com
 
 L'URL del repository è stabile: la branch `builds` viene aggiornata a ogni build.
 
+### Link diretto per Android
+
+Dal telefono puoi aprire direttamente questo link: CloudStream si apre e carica il
+repository senza dover copiare l'URL.
+
+```text
+cloudstreamrepo://raw.githubusercontent.com/fra06083/biglie/builds/plugins.json
+```
+
+Se il link non è cliccabile, incollalo nella barra degli indirizzi del browser oppure
+usa il pulsante **Aggiungi repository** e incolla l'URL `https://...` qui sopra.
+
 ### Vuoi usare solo la parola `biglie`?
 
 CloudStream, se nel campo URL scrivi una sola parola, la risolve tramite
