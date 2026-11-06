@@ -145,11 +145,10 @@ class StreamingCommunity(
         }
 
         val now = System.currentTimeMillis()
-        if (telegramResolvedBaseUrl == null &&
-            now - lastTelegramCheck >= TELEGRAM_RECHECK_MS
-        ) {
+        if (now - lastTelegramCheck >= TELEGRAM_RECHECK_MS) {
             lastTelegramCheck = now
-            telegramResolvedBaseUrl = runCatching { resolveFromTelegram() }.getOrNull()
+            val fresh = runCatching { resolveFromTelegram() }.getOrNull()
+            if (fresh != null) telegramResolvedBaseUrl = fresh
         }
 
         val resolved = telegramResolvedBaseUrl ?: return

@@ -42,7 +42,7 @@ jobs:
           java-version: 21
 
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4.0.1
         with:
           packages: "platform-tools platforms;android-36 build-tools;36.0.0"
 
@@ -53,6 +53,7 @@ jobs:
           ./gradlew --no-daemon make makePluginsJson
           find . -path "*/build/*.cs3" -type f -exec cp -v {} "$GITHUB_WORKSPACE/builds/" \;
           cp build/plugins.json "$GITHUB_WORKSPACE/builds/plugins.json"
+          cp build/plugins.json "$GITHUB_WORKSPACE/builds/repo.json"
 
       - name: Publish builds
         run: |

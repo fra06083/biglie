@@ -41,7 +41,7 @@ class VixSrcExtractor : ExtractorApi() {
                 url = playlistUrl,
                 type = ExtractorLinkType.M3U8
             ) {
-                this.referer = this@VixSrcExtractor.referer
+                this.referer = this@VixSrcExtractor.referer ?: "https://vixsrc.to/"
                 this.headers = mapOf("User-Agent" to userAgent)
             }
         )
