@@ -1,1 +1,26 @@
-[]
+[
+    {
+        "url": "https://raw.githubusercontent.com/fra06083/biglie/builds/StreamingCommunity.cs3",
+        "status": 1,
+        "version": 35,
+        "name": "StreamingCommunity",
+        "internalName": "StreamingCommunity",
+        "authors": [
+            "doGior",
+            "fra06083"
+        ],
+        "description": "TV Shows and Movies from StreamingCommunity (auto-updating domain)",
+        "fileSize": 68760,
+        "repositoryUrl": "https://github.com/fra06083/biglie",
+        "language": "it",
+        "tvTypes": [
+            "TvSeries",
+            "Movie",
+            "Documentary",
+            "Cartoon"
+        ],
+        "iconUrl": "https://streamingcommunityz.boo/apple-touch-icon.png?v=2",
+        "apiVersion": 1,
+        "fileHash": "sha256-26f8dd47e6c8c8fa4fcec0e3c58fd62a550884022e6f66bf626714a9b57e7893"
+    }
+]
