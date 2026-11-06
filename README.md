@@ -34,6 +34,16 @@ L'URL del repository è stabile: la branch `builds` viene aggiornata a ogni buil
 > (il descrittore del repository), **non** `plugins.json` (la lista dei plugin).
 > Se CloudStream mostra un errore di parsing, controlla di aver usato l'URL giusto.
 
+### Se CloudStream non aggiunge il repository
+
+- Verifica che l'URL finisca con `repo.json`.
+- Elimina il repository vecchio e aggiungilo di nuovo.
+- Se l'errore compare subito dopo un aggiornamento, GitHub può servire la
+  versione precedente per qualche minuto. Usa questo URL alternativo:
+  `https://github.com/fra06083/biglie/raw/refs/heads/builds/repo.json`.
+- Se `raw.githubusercontent.com` non è raggiungibile dalla tua rete, usa
+  l'URL alternativo qui sopra (passa da `github.com`).
+
 ### Link diretto per Android
 
 Dal telefono puoi aprire direttamente questo link: CloudStream si apre e carica il
