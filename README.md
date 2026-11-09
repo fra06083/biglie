@@ -6,7 +6,7 @@ canale Telegram ufficiale [@Streaming_community_sito](https://t.me/Streaming_com
 
 ## Cosa cambia rispetto all'originale
 
-- Dominio predefinito aggiornato a `streamingcommunityz.boo`.
+- Dominio predefinito aggiornato a `streamingcommunityz.nexus`.
 - Il plugin prova a leggere l'ultimo dominio direttamente dalla pagina pubblica del
   canale Telegram (`https://t.me/s/Streaming_community_sito`) all'avvio.
 - Se il dominio cambia, una GitHub Action aggiorna il codice, incrementa la versione

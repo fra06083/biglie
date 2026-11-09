@@ -57,7 +57,7 @@ class StreamingCommunity(
     override val hasMainPage = true
 
     companion object {
-        const val DEFAULT_BASE_URL = "https://streamingcommunityz.boo/"
+        const val DEFAULT_BASE_URL = "https://streamingcommunityz.nexus/"
         const val TELEGRAM_URL = "https://t.me/s/Streaming_community_sito"
         var name = "StreamingCommunity"
         const val TAG = "SCommunity"

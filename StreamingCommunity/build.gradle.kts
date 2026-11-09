@@ -1,5 +1,5 @@
 // use an integer for version numbers
-version = 35
+version = 36
 
 cloudstream {
     description = "TV Shows and Movies from StreamingCommunity (auto-updating domain)"
@@ -23,7 +23,7 @@ cloudstream {
     requiresResources = true
     language = "it"
 
-    iconUrl = "https://streamingcommunityz.boo/apple-touch-icon.png?v=2"
+    iconUrl = "https://streamingcommunityz.nexus/apple-touch-icon.png?v=2"
 }
 
 android {
